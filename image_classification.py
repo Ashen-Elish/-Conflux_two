@@ -31,8 +31,8 @@ def load_image(imageLabel):
         return None
 
 
-col1, col2 = st.columns(2)
 st.title('Стилизация изображений')
+col1, col2 = st.columns(2)
 with col1:
  img = load_image('Первое изображение')
 with col2:
