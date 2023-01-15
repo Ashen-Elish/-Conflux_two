@@ -40,8 +40,8 @@ with col2:
 result = st.button('Применить стиль второго изображения к первому')
 if result:
     # разрешение content_imgae лучше поменять чтобы соотношение сторон было всегда как в исходном файле, иначе он картинку обрезает
-    content_image = preprocess_image(img,([0-10000]))
-    style_image = preprocess_image(img2,([0-10000]))
+    content_image = preprocess_image(img,([0,10000]))
+    style_image = preprocess_image(img2,([0,10000]))
     style_image = tf.nn.avg_pool(style_image, ksize=[3,3], strides=[1,1], padding='SAME')
     st.write('**Результат:**')
     hub_handle = 'https://tfhub.dev/google/magenta/arbitrary-image-stylization-v1-256/2'
